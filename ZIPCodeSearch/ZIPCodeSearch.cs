@@ -48,7 +48,7 @@ public class ZIPCodeSearch
     }
     public void Build(TextReader r)
     {
-        string filePath = @"/Users/mamikawamura/Desktop/geo-data.csv";
+        string filePath = @"/Users/Desktop/geo-data.csv";
         r = File.OpenText(filePath);
         List<ItemSet> list = new List<ItemSet>();
         var header = r.ReadLine().Split(new char[] { ';' });
