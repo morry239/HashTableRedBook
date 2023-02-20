@@ -7,7 +7,7 @@ namespace ZIPCodeSuche_RotesBuch
         static void Main(string[] args)
         {
             var codeSearch = new ZIPCodeSearch();
-            codeSearch.Build(new StreamReader(args[0], Encoding.Default)); 
+            codeSearch.Build(new StreamReader(args[0], Encoding.Default)); //ERROR HERE
             
             Console.WriteLine($"Anwendung ZIPCodeSearch");
 
