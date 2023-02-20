@@ -74,7 +74,7 @@ public class Finder
 
         public void AddItem(string attribute, string classification, string column)
         {
-            column = ActivateReader(@"/Users/mamikawamura/Desktop/geo-data.csv").ToString();
+            column = ActivateReader(@"/Users/geo-data.csv").ToString();
             var key = Convert.ToString(attribute + Convert.ToString("->")) + classification; //irgendwo hier soll csv datei abgelesen werden
 
             Finder item = null;
