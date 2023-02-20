@@ -103,7 +103,7 @@ public class Finder
     {
         var list = new System.Collections.Generic.List<int>();
 
-        string filePath = @"/Users/mamikawamura/Desktop/geo-data.csv";
+        string filePath = @"/Users/Desktop/geo-data.csv";
         r = File.OpenText(filePath);
 
         var header = r.ReadLine().Split(new char[] { ';' });
