@@ -70,10 +70,10 @@ public class OneR
 
         public void AddItem(string attribute, string classification)
         {
-            var key = Convert.ToString(attribute + Convert.ToString("->")) + classification;
+            var key = Convert.ToString(attribute + Convert.ToString("->")) + classification; //irgendwo hier soll csv datei abgelesen werden
 
             Item item = null;
-            if (Items.ContainsKey(key))
+            if (Items.ContainsKey(key)) //pruefen ob die hash- werte state in der DatenTablle/CSVData habe --> zu ToStringMethode 
                 ;
 
             if (item == null)
@@ -183,7 +183,7 @@ public class OneR
 
         // Lösung für Vorhersage speichern
         foreach (Item item in sol.Items.Values)
-            Solution.Add(item.Attribute, item.Classification);
+            Solution.Add(item.Attribute, item.Classification); //
 
         Console.WriteLine("".PadLeft(80, '_'));
         Console.WriteLine("Regeln: " + sol.ToString());

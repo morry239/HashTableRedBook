@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonnenschutzVorhersagen", "SonnenschutzVorhersagen\SonnenschutzVorhersagen.csproj", "{65C8E299-7E4C-4B6A-A971-2889AE6D4D3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZIPCodeSearch", "ZIPCodeSearch\ZIPCodeSearch.csproj", "{BBE6C44B-8967-4285-A13D-06B3514B2422}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{65C8E299-7E4C-4B6A-A971-2889AE6D4D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C8E299-7E4C-4B6A-A971-2889AE6D4D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C8E299-7E4C-4B6A-A971-2889AE6D4D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE6C44B-8967-4285-A13D-06B3514B2422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE6C44B-8967-4285-A13D-06B3514B2422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE6C44B-8967-4285-A13D-06B3514B2422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE6C44B-8967-4285-A13D-06B3514B2422}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
