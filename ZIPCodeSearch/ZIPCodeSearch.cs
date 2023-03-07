@@ -4,7 +4,7 @@ namespace ZIPCodeSuche_RotesBuch;
 
 public class ZIPCodeSearch
 {
-    private class Item //Eigenschaften der Attribute und der Classification zuzuweisen
+    private class Item //initialise Attribute and Classification's properties 
     {
         public string Attribute { get; private set; }
         public string Classification { get; private set; }
@@ -16,12 +16,11 @@ public class ZIPCodeSearch
         }
     }
     
-    private class ItemSet //verwaltet eine einzelne Spalte als ein unabhängiges Attribut
+    private class ItemSet //manage a single column as an independent Attribute
     {
-        /*dabei werden alle Kombinationen von Attributwerten und Klassifikationswerten für eine einzelne Spalte
-         berücksichtigt.*/
-        public string Column { get; private set; } //enthält den Spaltennamen des unabhängigen 
-        public Dictionary<string, Item> Items { get; private set; }//Indiz, der den Text aus Attributwert und Klassifikationswert verwendet 
+        /*configure all the combinations of attribute and classification values for a column*/
+        public string Column { get; private set; } //contains the column name of an independent attrubute
+        public Dictionary<string, Item> Items { get; private set; }//an index where attribute and classification values are applied
 
         public ItemSet(string column)
         {
@@ -29,7 +28,7 @@ public class ZIPCodeSearch
             Items = new Dictionary<string, Item>(10);
         }
 
-        public void AddItem(string attribute, string classification)//jede Kombination aus einem Kombination der Itemset-Klasse hinzugefügt
+        public void AddItem(string attribute, string classification)//add all the combinations of the Item class.
         {
             var key = attribute + "->" + classification;
 
@@ -39,7 +38,7 @@ public class ZIPCodeSearch
                 item = Items[key]; 
             }
 
-            if (item == null) //Attribut- und Klassifikation Kombination existiert noch nicht
+            if (item == null) //The attribute-classification combination does not exist yet
             {
                 item = new Item(attribute, classification);
                 Items[key] = item;
@@ -52,7 +51,7 @@ public class ZIPCodeSearch
         r = File.OpenText(filePath);
         List<ItemSet> list = new List<ItemSet>();
         var header = r.ReadLine().Split(new char[] { ';' });
-        foreach (var head in header) //Spaltenüberschriften lesen
+        foreach (var head in header) //read the header from the csv data
         {
             list.Add(new ItemSet(head));
         }
@@ -65,7 +64,7 @@ public class ZIPCodeSearch
 
             string classification = tokens[0];
 
-            for (int i = 0; i < tokens.Length; i++) //Daten einlesen und Häufigkeiten ermitteln
+            for (int i = 0; i < tokens.Length; i++) //read the data and print out the content of .csv
             {
                 string attribute = tokens[i];
                 list[i].AddItem(attribute, classification);
