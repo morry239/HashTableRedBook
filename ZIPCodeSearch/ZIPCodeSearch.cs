@@ -49,7 +49,7 @@ public class ZIPCodeSearch
     {
         string filePath = @"/Users/Desktop/geo-data.csv";
         using FileStream fs = File.Create(filePath); //applied FileStream
-        r = new StreamWriter(fs);
+        r = new StreamReader(fs);
         List<ItemSet> list = new List<ItemSet>();
         var header = r.ReadLine().Split(new char[] { ';' });
         foreach (var head in header) //read the header from the csv data
